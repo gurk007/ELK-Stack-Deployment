@@ -1,3 +1,5 @@
+## Automated ELK Stack Deployment
+
 The files in this repository were used to configure the network depicted below.
 
 ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/Azure%20ELK%20Diagram%204.png)
@@ -166,4 +168,4 @@ SSH into the control node and follow the steps below:
 
 - ##### Metricbeats
 
-  Copy the install-elk.yml file to /etc/ansible/
+  Copy the install-elk.yml file to /etc/ansib
