@@ -44,7 +44,7 @@ The configuration details of each machine may be found below.
 | Web-1    | Standard B1ms (1 vcpus, 2 GiB memory) | DVWA     | 10.1.0.5   | Linux UbuntuServer 18.04-LTS |
 | Web-2    | Standard B1ms (1 vcpus, 2 GiB memory) | DVWA     | 10.1.0.6   | Linux UbuntuServer 18.04-LTS |
 | Web-3    | Standard B1ms (1 vcpus, 2 GiB memory) | DVWA     | 10.1.0.7   | Linux UbuntuServer 18.04-LTS |
-| Elk      | Standard B2s (2 vcpus, 4 GiB memory)  | DVWA     | 10.0.0.4   | Linux UbuntuServer 18.04-LTS |
+| Elk      | Standard B2s (2 vcpus, 4 GiB memory)  | ELK      | 10.0.0.4   | Linux UbuntuServer 18.04-LTS |
 
 ### Access Policies
 
