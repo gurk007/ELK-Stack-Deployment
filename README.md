@@ -109,13 +109,18 @@ These Beats allow us to collect the following information from each machine:
 
   ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/metricbeat2.PNG)
 
+
 ### Using the Playbook ELK
 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
 
-- Copy the install-elk.yml file to /etc/ansible/.
+- Download and Copy the install-elk.yml file to /etc/ansible/.
+
+  ```
+  curl -LJO https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Ansible/install-elk.yml
+  ```
 
 - Update the host file on the ansible control node located `/etc/ansible/hosts` to include Elk VM IP address (10.0.0.4)
 
@@ -166,6 +171,50 @@ SSH into the control node and follow the steps below:
 
   - Save this file in `/etc/ansible/roles/filebeat-playbook.yml`
 
+  - Run the file-beat-playbook to install filebeat agent on all webservers.
+
+    ```
+    ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+    ```
+
+    The below screenshot is from Kabana indicating proper communication between filebeat agents and the ELK stack.
+
+    ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/Capture.PNG)
+
 - ##### Metricbeats
 
-  Copy the install-elk.yml file to /etc/ansib
+  - Download metric-conf.yml
+
+    ```
+    curl -LJO https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Ansible/metricbeat-config.yml
+    ```
+
+  - Edit metric-conf.yml to reflect the 2 following entries - 10.0.0.4 is the IP address of my Elk server.
+
+    ```
+    output.elasticsearch:
+    hosts: ["10.0.0.4:9200"]
+    
+    setup.kibana:
+    host: "10.0.0.4:5601"   
+    ```
+
+  - Save this file in `/etc/ansible/files/metric-config.yml`
+
+  - Download metric-playbook-yml
+
+    ```
+    curl -LJO https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Ansible/metricbeat-playbook.yml
+    ```
+
+  - Save this file in `/etc/ansible/roles/metricbeat-playbook.yml`
+
+  - Run the metric-beat-playbook to install metricbeat agent on all webservers.
+
+    ```
+    ansible-playbook /etc/ansible/roles/metric-playbook.yml
+    ```
+
+    The below screenshot is from Kabana indicating proper communication between metricbeat agents and the ELK stack.
+
+    ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/metricbeat.PNG)
