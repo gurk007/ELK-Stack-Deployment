@@ -2,9 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Azure ELK Diagram 4](C:\Users\keith\Documents\Azure ELK Diagram 4.png)
-
-
+![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/Azure%20ELK%20Diagram%204.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -84,7 +82,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker_ps_output](C:\Users\keith\Documents\CyberSecurity\docker_ps_output.PNG)
+![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/docker_ps_output.PNG)
 
 ### Target Machines & Beats
 
@@ -105,15 +103,11 @@ These Beats allow us to collect the following information from each machine:
 
 - Filebeat has the ability to collect any type of log data.  Our example is collecting syslog data.  Below is screenshot of our syslog data collection within Kabana.
 
-  ![filebeat 2](C:\Users\keith\Documents\CyberSecurity\filebeat 2.PNG)
+  ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/filebeat%202.PNG)
 
 - Metricbeat has the ability to collect system health metrics such as CPU utilization, disk usage, network bandwidth I/O.  Below is a Kibana screenshot of metricbeat data of our three web server withing the Kibana console
 
-  ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/kibana2.PNG)
-
-  ![](C:\Users\keith\Documents\CyberSecurity\metricbeat2.PNG)
-
-  
+  ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/metricbeat2.PNG)
 
 ### Using the Playbook ELK
 
@@ -142,8 +136,6 @@ SSH into the control node and follow the steps below:
 
   ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/kibana2.PNG)
 
-  ![](C:\Users\keith\Documents\CyberSecurity\kibana2.PNG)
-
 ### Installing Beats
 
 - ##### Filebeats
@@ -151,7 +143,7 @@ SSH into the control node and follow the steps below:
   - Download filebeat-conf.yml
 
     ```
-    
+    curl -LJO https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Ansible/filebeat-config.yml
     ```
 
   - Edit filebeat-conf.yml to reflect the 2 following entries - 10.0.0.4 is the IP address of my Elk server.
@@ -169,7 +161,7 @@ SSH into the control node and follow the steps below:
   - Download filebeat-playbook-yml
 
     ```
-    
+    curl -LJO https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml
     ```
 
   - Save this file in `/etc/ansible/roles/filebeat-playbook.yml`
