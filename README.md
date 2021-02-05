@@ -137,9 +137,15 @@ SSH into the control node and follow the steps below:
 
   Filebeats will be install on the devices under the `[webserver]` section and the ELK stack will be in stalled on devices under `[elk]` 
 
-- Run the  playbook `ansible-playbook /etc/ansible/install-elk.yml` , and navigate to port ` http://[your.ELK-VM.External.IP]:5601/app/kibana`  to check that the installation worked as expected.  You should get a screen as follows:
+- Run the  playbook
 
-  ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/kibana2.PNG)
+  ```
+  ansible-playbook /etc/ansible/install-elk.yml
+  ```
+
+- Using a web browser navigate to port ` http://[your.ELK-VM.External.IP]:5601/app/kibana`  to check that the installation worked as expected.  You should get a screen as follows:
+
+![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/kibana2.PNG)
 
 ### Installing Beats
 
