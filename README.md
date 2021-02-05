@@ -135,7 +135,7 @@ SSH into the control node and follow the steps below:
    10.0.0.4 ansible_python_interpreter=/usr/bin/python3
   ```
 
-  Filebeats will be install on the devices under the `[webserver]` section and the ELK stack will be in stalled on devices under `[elk]` 
+  Filebeats will be install on the devices under the `[webserver]` section and the ELK stack will be in installed on devices under `[elk]` 
 
 - Run the  playbook
 
