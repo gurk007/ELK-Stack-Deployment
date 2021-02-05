@@ -105,7 +105,7 @@ These Beats allow us to collect the following information from each machine:
 
   ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/filebeat%202.PNG)
 
-- Metricbeat has the ability to collect system health metrics such as CPU utilization, disk usage, network bandwidth I/O.  Below is a Kibana screenshot of metricbeat data of our three web server withing the Kibana console
+- Metricbeat has the ability to collect system health metrics such as CPU utilization, disk usage, network bandwidth I/O.  Below is a Kibana screenshot of metricbeat data of our three web server within the Kibana console
 
   ![](https://github.com/gurk007/ELK-Stack-Deployment/blob/main/Diagrams/metricbeat2.PNG)
 
