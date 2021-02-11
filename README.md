@@ -66,7 +66,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-01   | No                  | 10.1.0.4:22                                   |
 | Web-02   | No                  | 10.1.0.4:22                                   |
 | Web-03   | No                  | 10.1.0.4:22                                   |
-| Elk      | Yes                 | 10.1.0.4:22, 40.87.27.37:22, 40.87.27.37:5601 |
+| Elk      | Yes                 | 10.0.0.4:22, 40.87.27.37:22, 40.87.27.37:5601 |
 
 ### Elk Configuration
 
